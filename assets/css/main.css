@@ -2738,6 +2738,18 @@ input, select, textarea {
 				background-color: gray;
 			}
 
+			.tiles article.style9 > .image:before {
+				background-color: rgb(125, 180, 169);
+			}
+
+			.tiles article.style10 > .image:before {
+				background-color: rgb(221, 211, 153);
+			}
+
+			.tiles article.style11 > .image:before {
+				background-color: rgb(195, 173, 224);
+			}
+
 			body:not(.is-touch) .tiles article:hover > .image {
 				-moz-transform: scale(1.1);
 				-webkit-transform: scale(1.1);
