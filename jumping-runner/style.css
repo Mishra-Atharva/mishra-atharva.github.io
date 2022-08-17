@@ -1,0 +1,207 @@
+/*Removing the extra margin and padding from the website.*/
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/* Title */
+h1 {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 30px;
+	left: 10px;
+	font-size: 20px;
+	font-family: Trebuchet MS;
+}
+
+/*Settin up the screen for the game.*/
+#screen {
+	max-width: 800px;
+	height: 400px;
+	border: 1px solid black;
+	position: relative;
+	top: 100px;
+	left: 220px;
+	overflow: hidden;
+	background-color: #2381e3;
+}
+
+/*Name*/
+#name {
+	position: relative;
+	top: 120px;
+	left: 220px;
+}
+
+/*Timer*/
+#time {
+	position: relative;
+	top: 120px;
+	left: 220px;
+}
+
+/*High score*/
+#High {
+	position: relative;
+	top: 100px;
+	left: 750px;
+
+}
+
+/*Start button*/
+#start {
+	padding: 5px;
+	z-index: 3;
+	display: ;
+	position: relative;
+	top: 100px;
+}
+
+#start:hover {
+	cursor: pointer;
+}
+
+/*Play again button*/
+#again {
+	padding: 5px;
+	z-index: 3;
+	display: none;
+	position: relative;
+	top: 100px;
+}
+
+#again:hover {
+	cursor: pointer;
+}
+
+/*Chance button*/
+#Chance {
+	display: none;
+	padding: 5px;
+	z-index: 3;
+	display: ;
+	position: relative;
+	top: 100px;
+}
+
+#Chance:hover {
+	cursor: pointer;
+}
+
+/*Setting up the player.*/
+#player {
+	z-index: 2;
+	width: 70px;
+	height: 70px;
+	position: relative;
+	top: 345px;
+	right: 15px;
+	background-image: url("player.png");
+	background-size: 70px 70px;
+}
+
+/*Setting up the object.*/
+#object {
+	z-index: 2;
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	position: relative;
+	top: 308px;
+	left: 779px;
+	border: 1px solid black;
+}
+
+/*Moving background*/
+#middle {
+	overflow: hidden;
+	z-index: 1;
+	width: 100vw;
+	height: 400px;
+	position: absolute;
+	bottom: -4px;
+	background-image: url("photo.PNG");
+	background-repeat: repeat-x;
+}
+
+/*Jumping animation for the player.*/
+@keyframes jump {
+	0% {
+		top: 345px;
+	}
+
+	20% {
+		top: 310px;
+	}
+
+	40% {
+		top:310px;
+	}
+
+	100% {
+		top: 345px;
+	}
+}
+
+@keyframes double {
+	0% {
+		top: 345px;
+	}
+
+	25% {
+		top: 200px;
+	}
+
+	50% {
+		top: 220px;
+	}
+
+	75% {
+		top: 270px;
+	}
+
+	100% {
+		top: 345px;
+	}
+}
+
+/*Creating animation for the object.*/
+@keyframes object {
+	0% {
+		left: 779px;
+	}
+
+	100% {
+		left: -40px;
+	}
+}
+
+/* Background animation*/
+@keyframes scroll {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+  	left: -480px;
+  }
+}
+
+/*Storing the jump animation to call it from javascript.*/
+.animation {
+	animation: jump 0.5s linear;
+}
+
+.animationdouble {
+	animation: double 0.5s linear;
+}
+
+.animationblock {
+	animation: object 1s infinite linear;
+}
+
+.animationbackground {
+	animation: scroll 5s infinite linear;
+}
