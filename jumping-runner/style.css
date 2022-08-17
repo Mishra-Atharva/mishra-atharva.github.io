@@ -54,7 +54,7 @@ h1 {
 #start {
 	padding: 5px;
 	z-index: 3;
-	display: ;
+	display: none;
 	position: relative;
 	top: 100px;
 }
@@ -81,7 +81,7 @@ h1 {
 	display: none;
 	padding: 5px;
 	z-index: 3;
-	display: ;
+	display: none;
 	position: relative;
 	top: 100px;
 }
