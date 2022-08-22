@@ -8,7 +8,7 @@ function getBooks(){
     document.getElementById("display").innerHTML="";
 
     // LOOKING FOR WHAT USER HAS SEARCHED FOR
-    fetch("http://openlibrary.org/search.json?q="+document.getElementById("looking").value)
+    fetch("https://openlibrary.org/search.json?q="+document.getElementById("looking").value)
 
     // CONVERTING RESPONSE FROM STRING TO JSON
     .then(a => a.json())
