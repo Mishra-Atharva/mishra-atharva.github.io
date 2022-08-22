@@ -30,8 +30,17 @@ body{
 }
 
 /* DISPLAY BOX FOR THE BOOKS */
-.display1{
-    background-color: blanchedalmond;
-    width: 150px;
-    height: 150px;
+.book {
+    background-color: blue;
+    border-radius: 5px;
+    width: 20%;
+    height: auto;
+    padding: 10px;
+    float: left;
+    display: inline;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
 }
