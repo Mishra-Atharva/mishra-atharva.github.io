@@ -31,7 +31,7 @@ body{
 
 /* DISPLAY BOX FOR THE BOOKS */
 .book {
-    background-color: blue;
+    background-color:darkgrey;
     border-radius: 5px;
     width: 20%;
     height: auto;
