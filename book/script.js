@@ -19,32 +19,15 @@ function getBooks() {
         var isbnNumber = response.docs[i].isbn[0];
 
         const img = new Image();
-        img.src =
-          "https://covers.openlibrary.org/b/isbn/" + isbnNumber + "-M.jpg";
+        img.src = "https://covers.openlibrary.org/b/isbn/" + isbnNumber + "-M.jpg";
         console.log(img.src);
-
+        
         img.addEventListener("load", () => {
           console.log(img.naturalWidth);
           if (img.naturalWidth > 1) {
-            document.getElementById("display").innerHTML +=
-              "<div class='book'>" +
-              "<img src='" +
-              img.src +
-              "'/>" +
-              "<h3>" +
-              title +
-              "</h3>" +
-              authorname +
-              "</div>";
+            document.getElementById("display").innerHTML += "<div class='book'>" + "<img src='" + img.src + "'/>" + "<h3>" + title + "</h3>" + authorname + "</div>";
           } else {
-            document.getElementById("display").innerHTML +=
-              "<div class='book'>" +
-              "<img src='http://snapbuilder.com/code_snippet_generator/image_placeholder_generator/180x240/cdcdcd/DDDDDD'>" +
-              "<h3>" +
-              title +
-              "</h3>" +
-              authorname +
-              "</div>";
+            document.getElementById("display").innerHTML += "<div class='book'>" + "<img src='http://snapbuilder.com/code_snippet_generator/image_placeholder_generator/180x240/cdcdcd/DDDDDD'>" + "<h3>" + title + "</h3>" + authorname + "</div>";
           }
         });
       }
