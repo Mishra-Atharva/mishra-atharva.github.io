@@ -1,13 +1,15 @@
 // FUNCTION TO GET INFORMATION ABOUT THE BOOK
 function getBooks() {
+
+  var size = false;
+
+  // STORING THE USER SEARCH
+  var user = document.getElementById("looking").value;
   // RESETS THE DIV TO EMPTY
-  document.getElementById("display").innerHTML = "";
+  document.getElementById("book_container").innerHTML = "";
 
   // LOOKING FOR WHAT USER HAS SEARCHED FOR
-  fetch(
-    "https://openlibrary.org/search.json?q=" +
-      document.getElementById("looking").value
-  )
+  fetch("https://openlibrary.org/search.json?q=" + user)
     // CONVERTING RESPONSE FROM STRING TO JSON OBJECT
     .then((a) => a.json())
 
@@ -20,16 +22,18 @@ function getBooks() {
 
         const img = new Image();
         img.src = "https://covers.openlibrary.org/b/isbn/" + isbnNumber + "-M.jpg";
-        console.log(img.src);
+        //console.log(img.src);
         
         img.addEventListener("load", () => {
           console.log(img.naturalWidth);
           if (img.naturalWidth > 1) {
-            document.getElementById("display").innerHTML += "<div class='book'>" + "<img src='" + img.src + "'/>" + "<h3>" + title + "</h3>" + authorname + "</div>";
+            document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='" + img.src + "'/>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
           } else {
-            document.getElementById("display").innerHTML += "<div class='book'>" + "<img src='http://snapbuilder.com/code_snippet_generator/image_placeholder_generator/180x240/cdcdcd/DDDDDD'>" + "<h3>" + title + "</h3>" + authorname + "</div>";
+            document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='cover.png'>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
           }
         });
       }
     });
 }
+
+//http://snapbuilder.com/code_snippet_generator/image_placeholder_generator/180x240/cdcdcd/DDDDDD

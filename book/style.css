@@ -5,42 +5,103 @@ body{
 }
 
 /* CONTAINER FOR ALL DIV */
-.main_container{
+#main_container{
     margin: auto;
-    background-color: black;
+    background-color: transparent;
     width: 80%;
-    height: 80%;
+    height: auto;
     padding:10px;
     float: center;
 }
 
-/* SEARCH BAR */
-.search_bar{
+/* SEARCH BAR AND BUTTON CONTAINER */
+#search_bar{
+    position: relative;
+    right: 57px;
     background-color: transparent;
     width: auto;
     float: right;
     display: table;
 }
 
-/* SEARCH BUTTON */
-.searching{
+/* SEARCH BAR */
+#looking{
+    width: 50px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
     background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#looking:focus{
+    width: 150px;
+    height: 30px;
+}
+
+#logo{
+    width: 1em;
+    height: 1em;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+
+/* SEARCH BUTTON */
+#searching{
+    border: 0px;
+    background-color: transparent;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* DISPLAY BOX FOR THE BOOKS */
-.book {
-    background-color:darkgrey;
+/* DISPLAY CONTAINER FOR THE BOOKS */
+#book_container{
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+/* BOX FOR EACH BOOK */
+#book {
+    position: static;
+    transition: .1s;
+    background-color: blue;
     border-radius: 5px;
     width: 20%;
-    height: auto;
-    padding: 10px;
+    height: 475px;
+    margin: 35px;
     float: left;
     display: inline;
 }
 
-.book img {
+/* HOVER EFFECT */
+#book:hover {
+    position: static;
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color:aliceblue;
+}
+
+/* IMAGE CORRECTION */
+#book img {
+    overflow: hidden;
     width: 100%;
-    height: auto;
+    max-height: 370px;
+    border-radius: 5px;
+}
+
+/* TEXT ON THE PAGE */
+h3, p{
+    margin: 10px;
+    word-break: keep-all;
+    text-align: center;
 }
