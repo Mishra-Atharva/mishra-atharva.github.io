@@ -1,9 +1,9 @@
-var cover = false;
-
 // FUNCTION TO GET INFORMATION ABOUT THE BOOK
 function getBooks() {
 
   var background = document.body;
+  var cover = false;
+  var currentImage = '';
   background.style.animationPlayState = "running";
   background.classList.remove("change");
   background.classList.add("change");
@@ -24,20 +24,27 @@ function getBooks() {
         var authorname = response.docs[i].author_name[0];
         var title = response.docs[i].title_suggest;
         var isbnNumber = response.docs[i].isbn[0];
+        var image = "https://covers.openlibrary.org/b/isbn/" + isbnNumber + "-M.jpg";
+        currentImage = image;
+        console.log(currentImage);
 
         const img = new Image();
         img.src = "https://covers.openlibrary.org/b/isbn/" + isbnNumber + "-M.jpg";
-        //console.log(img.src);
         
         img.addEventListener("load", e => {
           imageSize(img.naturalWidth);
         });
         function imageSize(size){
           if (size > 1){
-            document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='" + img.src + "'/>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
+            cover = true;
           } else {
-            document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='cover.png'>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
+            cover = false;
           }
+        }
+        if (cover == true) {
+          document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='" + search.svg + "'/>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
+        } else {
+          document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='cover.png'>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
         }
       }
     });
