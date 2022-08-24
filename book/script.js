@@ -2,8 +2,6 @@
 function getBooks() {
 
   var background = document.body;
-  var cover = false;
-  var currentImage = '';
   background.style.animationPlayState = "running";
   background.classList.remove("change");
   background.classList.add("change");
@@ -21,12 +19,9 @@ function getBooks() {
     // GETTING THE FIRST 10 RESULT OF THE BOOK SEARCH AND GETTING INFORMATION SUCH AS THE AUTHOR'S NAME AND THE IAMGE OF THE COVER OF THE BOOK THEN UPDATING THE "display" DIV
     .then((response) => {
       for (var i = 0; i <= response.docs.length; i++) {
-        var authorname = response.docs[i].author_name[0];
-        var title = response.docs[i].title_suggest;
-        var isbnNumber = response.docs[i].isbn[0];
-        var image = "https://covers.openlibrary.org/b/isbn/" + isbnNumber + "-M.jpg";
-        currentImage = image;
-        console.log(currentImage);
+        let authorname = response.docs[i].author_name[0];
+        let title = response.docs[i].title_suggest;
+        let isbnNumber = response.docs[i].isbn[0];
 
         const img = new Image();
         img.src = "https://covers.openlibrary.org/b/isbn/" + isbnNumber + "-M.jpg";
@@ -36,15 +31,10 @@ function getBooks() {
         });
         function imageSize(size){
           if (size > 1){
-            cover = true;
+            document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='" + img.src + "'/>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
           } else {
-            cover = false;
+            document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='cover.png'>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
           }
-        }
-        if (cover == true) {
-          document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='" + search.svg + "'/>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
-        } else {
-          document.getElementById("book_container").innerHTML += "<div id='book'>" + "<img src='cover.png'>" + "<h3>" + title + "</h3>" + "<p>" + authorname + "</p>" + "</div>";
         }
       }
     });
