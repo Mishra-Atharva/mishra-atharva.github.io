@@ -21,7 +21,7 @@ to.addEventListener("click", () => {
 
 // Authentication
 var myHeaders = new Headers();
-    myHeaders.append("apikey", "V5CEPdqCYlWSBoJVqn5W8rvNFDMFxB2E");
+    myHeaders.append("apikey", "YoydVf50MPjZnnHboDa6jU4Qy7dRIMGT");
     var requestOptions = {
         method: 'GET',
         redirect: 'follow',
