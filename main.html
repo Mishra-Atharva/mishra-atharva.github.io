@@ -1,0 +1,337 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mediaqureies.css">
+    <link rel="icon" href="./assets/person.svg">
+    
+    <title>Atharva Mishra | Portfolio</title>
+
+</head>
+<body>
+    <!-- Desktop Menu -->
+    <nav id="desktop-nav">
+        <div class="logo"><h2><mark>Portfolio</mark></h2></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav id="hamburger-nav">
+        <div class="logo"><h2><mark>Portfolio</mark></h2></div>
+        <div class="hamburger-menu"></div>
+        <div class="hamburger-icon" onclick="toogleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href="#about" onclick="toogleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toogleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toogleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toogleMenu()">Contact</a></li>
+        </div>
+    </nav>
+
+    <section id="profile">
+
+        <div class="section__pic-container">
+            <img src="./assets/boy.png" alt="Profile Pic">
+        </div>
+
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title"><mark>Atharva Mishra</mark></h1>
+            <p class="section__text__p2">Programmer</p>
+
+            <div class="btn-container">
+                <button
+                  class="btn btn-color-2"
+                  onclick="window.open('./assets/resume.pdf')"
+                >
+                  Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='#contact'">
+                  Contact Info
+                </button>
+              </div>
+              <div id="socials-container">
+                <img
+                  src="./assets/linkedin.png"
+                  alt="My LinkedIn profile"
+                  class="icon"
+                  onclick="location.href='https://www.linkedin.com/in/atharva-mishra-97b56424a/'"
+                />
+                <img
+                  src="./assets/github.png"
+                  alt="My Github profile"
+                  class="icon"
+                  onclick="location.href='https://github.com/Mishra-Atharva'"
+                />
+              </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/aboutme.jpeg"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <h3><mark>Experience</mark></h3>
+                <p>2 Weeks <br />Internship @ BSD Education</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3><mark>Education</mark></h3>
+                <p>High School Graduate<br />DSC International</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                an 18-year-old student at the <mark>University of Wollongong in Sydney</mark>,
+                actively explores <mark>software development</mark> through projects in HTML, CSS, JavaScript, Python, and C++.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='#experience'"
+        />
+    </section>
+
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <br><br><br>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Frontend Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    <p><mark>Intermediate</mark></p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    <p><mark>Intermediate</mark></p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Javascript</h3>
+                    <p><mark>Intermediate</mark></p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+                <h2 class="experience-sub-title">Backend <br> Development</h2>
+                <div class="article-container">
+                    <article>
+                        <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                        />
+                        <div>
+                            <h3>Python</h3>
+                            <p><mark>Intermediate</mark></p>
+                        </div>
+                    </article>
+                    <article>
+                        <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                        />
+                        <div>
+                            <h3>C++</h3>
+                            <p><mark>Basic&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</mark></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='#projects'"
+        />
+    </section>
+
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <br><br><br><br>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/movie.png"
+                  alt="Project 1"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Movie Rental</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Mishra-Atharva/Movie-Rental-Platform'"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/book.png"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Book API</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Mishra-Atharva/book-search-api'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://mishra-atharva.github.io/book/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/escape.png"
+                  alt="Project 3"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Escape Room</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Mishra-Atharva/escaperoom'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://mishra-atharva.github.io/escaperoom/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='#contact'"
+        />
+      </section>
+      <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:atharvamishramain@gmail.com">atharvamishramain@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/atharva-mishra-97b56424a/">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2024 Atharva Mishra. All Rights Reserved.</p>
+      </footer>
+      <script src="script.js"></script>
+    </body>
+  </html>
+  
+
+
+    <script src="main.js"></script>
+</body>
+</html>
